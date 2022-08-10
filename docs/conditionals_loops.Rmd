@@ -1,0 +1,74 @@
+---
+title: "Conditionals & Loops"
+author: "Elise Gonzales"
+date: "2022-08-10"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+Task 1
+```{r}
+pm2_5 <- 48 
+if (pm2_5 < 100) {
+  print("Low to moderate risk")
+} else if (pm2_5 >= 100 & pm2_5 < 150) {
+  print("Unhealthy for sens groups")
+} else 
+  print("Health risk present")
+
+```
+
+Task 2
+```{r}
+species <- "blue whale"
+
+if (str_detect(species, "whale")) {
+  print("You found a whale!")
+}
+```
+
+Task 3
+```{r}
+max_airtemp_c <- 28
+
+if (max_airtemp_c > 27) {
+  print("Temp too high")
+} else {
+  print("Temp OK")
+}
+```
+
+Task 4
+```{r}
+base_burrito <- 6.50
+main_ingredient <- c("veggie", "chicken", "steak")
+
+for (i in seq_along(main_ingredient)) {
+if (main_ingredient[i] == "veggie") {
+  print(base_burrito)
+} else if (main_ingredient[i] == "chicken") {
+  print(base_burrito + 3.00)
+} else if (main_ingredient[i] == "steak") {
+  print(base_burrito + 3.25)
+}
+}
+```
+
+##For Loops
+
+Task 5
+```{r}
+fish <- c(8, 10, 12, 23)
+fish_types <- c("goldfish", "tetras", "guppies", "mollies")
+
+fish_type_values <- vector(mode = "numeric", length = length(fish))
+
+for (i in seq_along(fish)) {
+  
+}
+```
+
