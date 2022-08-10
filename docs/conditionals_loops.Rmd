@@ -65,10 +65,15 @@ Task 5
 fish <- c(8, 10, 12, 23)
 fish_types <- c("goldfish", "tetras", "guppies", "mollies")
 
-fish_type_values <- vector(mode = "numeric", length = length(fish))
+
+
+fish_type_prop <- vector(mode = "numeric", length = length(fish))
 
 for (i in seq_along(fish)) {
-  
+  prop_value <- proportions(fish[[i]], na.rm = TRUE) 
+    fish_type_prop[i] <- prop_value
 }
+
+prop
 ```
 
